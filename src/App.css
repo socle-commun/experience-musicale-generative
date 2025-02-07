@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    :root {
+        @apply bg-zinc-100 text-zinc-950 dark:bg-zinc-900 dark:text-zinc-50;
+    }
+
+    html {
+        @apply h-full;
+    }
+
+    body {
+        @apply h-screen;
+        @apply grid grid-cols-[1fr] grid-rows-[1fr_auto];
+    }
+
+    #app {
+        @apply contents;
+    }
+}
